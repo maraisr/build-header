@@ -2,7 +2,7 @@
 
 > Adds a pretty header to your build scripts.
 
-![example](./example.png)
+![example](https://cdn.jsdelivr.net/gh/maraisr/build-header@master/example.png)
 
 ```sh
 yarn add build-header

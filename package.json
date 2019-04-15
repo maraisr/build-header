@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "private": false,
   "description": "Put a fancy header to your build logs",
+  "keywords": [
+    "build",
+    "head",
+    "logs",
+    "script"
+  ],
+  "homepage": "https://github.com/maraisr/build-header",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maraisr/build-header"
+  },
   "license": "MIT",
   "author": "Marais Rossouw <me@maraisr.com>",
   "files": [
