@@ -21,10 +21,17 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "prepublishOnly": "yarn build",
     "build": "bundt index.js",
     "format": "prettier --write '*.js'",
+    "prepublishOnly": "yarn build",
     "test": "ava index.spec.js"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "es5",
+    "useTabs": true
   },
   "dependencies": {
     "env-ci": "^3.2.0",
@@ -35,6 +42,9 @@
     "boxen": "^3.1.0",
     "bundt": "^0.4.0",
     "prettier": "^1.17.0"
+  },
+  "engines": {
+    "node": ">=10.15.0"
   },
   "ava": {
     "require": [
