@@ -22,7 +22,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "bundt index.js",
-    "format": "prettier --write '*.js'",
+    "format": "prettier --write '*.{js,md}'",
     "prepublishOnly": "yarn build",
     "test": "ava index.spec.js"
   },
@@ -39,6 +39,10 @@
       ],
       "*.spec.js": [
         "ava",
+        "git add"
+      ],
+      "*.{js,md}": [
+        "prettier --write",
         "git add"
       ]
     },
