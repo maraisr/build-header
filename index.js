@@ -28,9 +28,7 @@ export default function buildHeader(env = process.env.NODE_ENV) {
 
 	log_messages.forEach(message => {
 		output.push(
-			` ${dim(message.label.padEnd(paddingEnd, ' '))}${magenta(
-				message.value
-			)} `
+			dim(message.label.padEnd(paddingEnd, ' ')) + magenta(message.value)
 		);
 	});
 
