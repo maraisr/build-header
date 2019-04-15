@@ -1,0 +1,4 @@
+node_modules/
+*.log
+*spec*.md
+dist/

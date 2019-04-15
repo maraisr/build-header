@@ -1,0 +1,78 @@
+{
+  "name": "build-header",
+  "version": "1.0.4",
+  "private": false,
+  "description": "Put a fancy header to your build logs",
+  "keywords": [
+    "build",
+    "head",
+    "logs",
+    "script"
+  ],
+  "homepage": "https://github.com/maraisr/build-header",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maraisr/build-header"
+  },
+  "license": "MIT",
+  "author": "Marais Rossouw <me@maraisr.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "bundt index.js",
+    "format": "prettier --write '*.{js,md}'",
+    "prepublishOnly": "yarn build",
+    "test": "ava index.spec.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "package.json": [
+        "npx sort-package-json",
+        "git add"
+      ],
+      "*.spec.js": [
+        "ava",
+        "git add"
+      ],
+      "*.{js,md}": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "relative": true
+  },
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "es5",
+    "useTabs": true
+  },
+  "dependencies": {
+    "boxen": "^3.1.0",
+    "env-ci": "^3.2.0",
+    "kleur": "^3.0.3"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "bundt": "^0.4.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.17.0"
+  },
+  "engines": {
+    "node": ">=10.15.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  }
+}
