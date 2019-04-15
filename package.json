@@ -1,6 +1,6 @@
 {
   "name": "build-header",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Put a fancy header to your build logs",
   "keywords": [
