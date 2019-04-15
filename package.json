@@ -34,12 +34,12 @@
     "useTabs": true
   },
   "dependencies": {
+    "boxen": "^3.1.0",
     "env-ci": "^3.2.0",
     "kleur": "^3.0.3"
   },
   "devDependencies": {
     "ava": "^1.4.1",
-    "boxen": "^3.1.0",
     "bundt": "^0.4.0",
     "prettier": "^1.17.0"
   },
