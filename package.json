@@ -21,18 +21,20 @@
   ],
   "main": "dist/index.js",
   "scripts": {
+    "prepublishOnly": "yarn build",
     "build": "bundt index.js",
     "format": "prettier --write '*.js'",
     "test": "ava index.spec.js"
   },
   "dependencies": {
-    "env-ci": "3.2.0",
-    "kleur": "3.0.3"
+    "env-ci": "^3.2.0",
+    "kleur": "^3.0.3"
   },
   "devDependencies": {
-    "ava": "1.4.1",
-    "bundt": "0.4.0",
-    "prettier": "1.17.0"
+    "ava": "^1.4.1",
+    "boxen": "^3.1.0",
+    "bundt": "^0.4.0",
+    "prettier": "^1.17.0"
   },
   "ava": {
     "require": [
