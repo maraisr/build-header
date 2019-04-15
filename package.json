@@ -1,0 +1,31 @@
+{
+  "name": "build-header",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Put a fancy header to your build logs",
+  "license": "MIT",
+  "author": "Marais Rossouw <me@maraisr.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "bundt index.js",
+    "format": "prettier --write '*.js'",
+    "test": "ava index.spec.js"
+  },
+  "dependencies": {
+    "env-ci": "3.2.0",
+    "kleur": "3.0.3"
+  },
+  "devDependencies": {
+    "ava": "1.4.1",
+    "bundt": "0.4.0",
+    "prettier": "1.17.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  }
+}
