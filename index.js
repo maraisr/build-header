@@ -4,9 +4,9 @@ const boxen = require('boxen');
 
 export default function buildHeader(env = process.env.NODE_ENV) {
 	const {
-		branch = 'null',
-		build: number = 'null',
-		commit = 'null',
+		branch = 'na',
+		build: number = 'na',
+		commit = 'na',
 		isCi,
 		name: ciName = 'local',
 	} = envCi();
@@ -17,16 +17,16 @@ export default function buildHeader(env = process.env.NODE_ENV) {
 		{ label: '🌳 Branch:', value: branch },
 		{
 			label: '🎯 Target:',
-			value: env,
+			value: env || 'development',
 		},
 	];
 
 	let output = [];
 
 	const paddingEnd =
-		Math.max(...log_messages.map(item => item.label.length)) + 3;
+		Math.max(...log_messages.map((item) => item.label.length)) + 3;
 
-	log_messages.forEach(message => {
+	log_messages.forEach((message) => {
 		output.push(
 			dim(message.label.padEnd(paddingEnd, ' ')) + magenta(message.value)
 		);
